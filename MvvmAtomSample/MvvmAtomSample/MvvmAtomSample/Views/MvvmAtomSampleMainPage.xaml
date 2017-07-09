@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmAtomSample.Views.MvvmAtomSampleMainPage">
+  <!--<Label Text="Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
+  <Grid Margin="0, 20, 0,0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+
+    <Label
+			Grid.Row="0"
+			Grid.Column="0"
+			Margin="5"
+			VerticalOptions="Center"
+			Text="Username"/>
+
+    <Entry
+			Grid.Row="0"
+			Grid.Column="1"
+			Margin="5"
+			VerticalOptions="Center"
+			Text="{Binding UserName}"/>
+
+    <Button
+			Grid.Row="0"
+			Grid.Column="2"
+			Margin="5"
+			VerticalOptions="Center"
+			Text = "Copy"
+			Command="{Binding CopyCommand}"/>
+
+    <Label
+			Grid.Row="1"
+			Grid.Column="0"
+			Margin="5"
+			VerticalOptions="Center"
+			Text="Password"/>
+
+    <Entry
+			Grid.Row="1"
+			Grid.Column="1"
+			IsPassword="true"
+			Margin="5"
+			VerticalOptions="Center"
+			Text="{Binding Password}"/>
+
+    <Label
+			Grid.Row="2"
+			Grid.Column="0"
+			Margin="5"
+			VerticalOptions="Center"
+			Text="Reqd field"/>
+
+    <Entry
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="5"
+			VerticalOptions="Center"
+			Text="{Binding Required}"/>
+
+    <Button
+			Grid.Row="3"
+			Grid.Column="1"
+			Margin="5"
+			VerticalOptions="Center"
+			Text="Navigate"
+			Command="{Binding NavigateCommand}"/>
+  </Grid>
+
+</ContentPage>

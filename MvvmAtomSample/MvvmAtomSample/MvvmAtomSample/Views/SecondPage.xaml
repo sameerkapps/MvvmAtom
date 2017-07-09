@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmAtomSample.Views.SecondPage">
+    <StackLayout Orientation="Vertical">
+        <Label Text="Welcome" FontSize="Large" HorizontalOptions="Center"/>
+        <Label Text="{Binding UserName}" FontSize="Default" HorizontalOptions="Center" TextColor="Green"/>
+        <Button
+			Margin="5"
+			HorizontalOptions="Center"
+			Text = "Message Box"
+			Command="{Binding MessageCommand}"/>
+    </StackLayout>
+</ContentPage>
